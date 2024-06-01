@@ -1,4 +1,4 @@
-/*describe.skip('Firt test', () => {
+describe.skip('Firt test', () => {
 
   beforeEach(async () => {
     await browser.maximizeWindow();
@@ -12,4 +12,4 @@
   });
 
   
-});*/
+});

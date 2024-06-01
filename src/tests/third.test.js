@@ -1,4 +1,4 @@
-/*describe('Third test', () => {
+describe('Third test', () => {
 
   beforeEach(async () => {
     await browser.maximizeWindow();
@@ -28,4 +28,4 @@
   });
 
 
-})*/
+});

@@ -1,4 +1,4 @@
-/*describe.skip('Second test', () => {
+describe.skip('Second test', () => {
 
   beforeEach(async () => {
     await browser.maximizeWindow();
@@ -16,4 +16,4 @@
     await expect(browser).toHaveUrl('https://en.wikipedia.org/wiki/Special:Search?go=Go&search=%D0%9C%D0%BE%D0%B2%D0%B0&ns0=1')
   })
 
-})*/
+});

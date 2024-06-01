@@ -35,7 +35,7 @@ describe('Fourth test', () => {
     const rows = await tbody.$$('tr');
     let tableOutput = '';
   
-    // Calculate maximum width for each column
+    
     const maxWidths = Array.from({ length: rows[0].$$('th,td').length }, () => 0);
     rows.forEach(async (row) => {
         const cells = await row.$$('th,td');
@@ -45,32 +45,29 @@ describe('Fourth test', () => {
         });
     });
   
-    // Add top frame
+    
     tableOutput += '+';
     maxWidths.forEach((maxWidth) => {
         tableOutput += '-'.repeat(maxWidth + 2) + '+';
     });
     tableOutput += '\n';
   
-    // Iterate through each row
+    
     for (let i = 0; i < rows.length; i++) {
         const row = rows[i];
         const cells = await row.$$('th,td');
   
-        // Add vertical line at the beginning of each row
         tableOutput += '|';
   
-        // Iterate through each cell in the row
         for (let j = 0; j < cells.length; j++) {
             const cell = cells[j];
             const cellText = await cell.getText();
-            // Pad the cell text to match the maximum width of the column
             const paddedCellText = cellText.padEnd(maxWidths[j]);
             tableOutput += ` ${paddedCellText} |`;
         }
         tableOutput += '\n';
   
-        // Add horizontal border after each row
+        
         tableOutput += '+';
         maxWidths.forEach((maxWidth) => {
             tableOutput += '-'.repeat(maxWidth + 2) + '+';
